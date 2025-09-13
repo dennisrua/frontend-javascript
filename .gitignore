@@ -1,0 +1,13 @@
+# Node dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Secrets
+*.pem
+*.key
+id_rsa
+id_ed25519
+*.pub
+.env
