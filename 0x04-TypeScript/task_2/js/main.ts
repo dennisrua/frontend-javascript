@@ -16,38 +16,40 @@ interface TeacherInterface {
 // Director class
 class Director implements DirectorInterface {
   workFromHome(): string {
-    return "Working from home";
+    return 'Working from home';
   }
   getCoffeeBreak(): string {
-    return "Getting a coffee break";
+    return 'Getting a coffee break';
   }
   workDirectorTasks(): string {
-    return "Getting to director tasks";
+    return 'Getting to director tasks';
   }
 }
 
 // Teacher class
 class Teacher implements TeacherInterface {
   workFromHome(): string {
-    return "Cannot work from home";
+    return 'Cannot work from home';
   }
   getCoffeeBreak(): string {
-    return "Cannot have a break";
+    return 'Cannot have a break';
   }
   workTeacherTasks(): string {
-    return "Getting to work";
+    return 'Getting to work';
   }
 }
 
 // Factory function
+// if (salary < 500)
 function createEmployee(salary: number | string): Director | Teacher {
-  if (typeof salary === "number" && salary < 500) {
+  if (typeof salary === 'number' && salary < 500) {
     return new Teacher();
   }
   return new Director();
 }
 
 // 6. Creating functions specific to employees
+// "export function isDirector"
 function isDirector(employee: Director | Teacher): employee is Director {
   return employee instanceof Director;
 }
@@ -60,22 +62,22 @@ function executeWork(employee: Director | Teacher): string {
 }
 
 // 7. String literal types
-type Subjects = "Math" | "History";
+type Subjects = 'Math' | 'History';
 
 function teachClass(todayClass: Subjects): string {
-  if (todayClass === "Math") {
-    return "Teaching Math";
+  if (todayClass === 'Math') {
+    return 'Teaching Math';
   }
-  return "Teaching History";
+  return 'Teaching History';
 }
 
 // Tests
-console.log(createEmployee(200));     // Teacher {}
-console.log(createEmployee(1000));    // Director {}
-console.log(createEmployee("$500"));  // Director {}
+console.log(createEmployee(200)); // Teacher {}
+console.log(createEmployee(1000)); // Director {}
+console.log(createEmployee('$500')); // Director {}
 
-console.log(executeWork(createEmployee(200)));   // Getting to work
-console.log(executeWork(createEmployee(1000)));  // Getting to director tasks
+console.log(executeWork(createEmployee(200))); // Getting to work
+console.log(executeWork(createEmployee(1000))); // Getting to director tasks
 
-console.log(teachClass("Math"));     // Teaching Math
-console.log(teachClass("History"));  // Teaching History
+console.log(teachClass('Math')); // Teaching Math
+console.log(teachClass('History')); // Teaching History
