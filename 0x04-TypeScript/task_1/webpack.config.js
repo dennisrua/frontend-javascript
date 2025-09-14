@@ -35,30 +35,3 @@ module.exports = {
     path: path.resolve(__dirname, "dist")
   }
 };
-
-module.exports = {
-  entry: './js/main.ts',
-  module: {
-    rules: [
-      {
-        test: /\.ts$/,
-        use: 'ts-loader',
-        exclude: /node_modules/,
-      },
-    ],
-  },
-  resolve: {
-    extensions: ['.ts', '.js'],
-  },
-  output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist'),
-  },
-  devServer: {
-    static: './dist',
-  },
-  mode: 'development',
-
-  // 👇 Add this line to avoid using eval()
-  devtool: 'source-map'
-};
