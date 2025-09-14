@@ -9,3 +9,5 @@ namespace Subjects {
     }
   }
 }
+
+// interface setTeacher(teacher:Teacher)
