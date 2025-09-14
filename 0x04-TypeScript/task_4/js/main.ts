@@ -17,19 +17,18 @@ export const cTeacher: Subjects.Teacher = {
 
 // For Cpp subject
 console.log('C++');
-cpp.teacher = cTeacher;
+cpp.setTeacher(cTeacher);
 console.log(cpp.getRequirements());
 console.log(cpp.getAvailableTeacher());
 
 // For Java subject
 console.log('Java');
-java.teacher = cTeacher;
+java.setTeacher(cTeacher);
 console.log(java.getRequirements());
 console.log(java.getAvailableTeacher());
 
 // For React subject
 console.log('React');
-react.teacher = cTeacher;
+react.setTeacher(cTeacher);
 console.log(react.getRequirements());
 console.log(react.getAvailableTeacher());
-
