@@ -4,7 +4,7 @@ namespace Subjects {
   export class Subject {
     teacher!: Subjects.Teacher;
 
-    // setTeacher(teacher: Teacher);
+    // setTeacher(teacher: Teacher)
     setTeacher(teacher: Subjects.Teacher) {
       this.teacher = teacher;
     }
