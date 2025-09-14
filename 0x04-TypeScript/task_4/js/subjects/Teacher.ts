@@ -4,3 +4,5 @@ namespace Subjects {
     lastName: string;
   }
 }
+
+// interface setTeacher(teacher:Teacher)
